@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E99B5E482038708A0053CC6C /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B5E472038708A0053CC6C /* RoundedCornerView.swift */; };
+		E99B5E4A203872680053CC6C /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B5E49203872680053CC6C /* RoundedCornerButton.swift */; };
+		E99B5E4C2038730D0053CC6C /* RoundedCornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B5E4B2038730D0053CC6C /* RoundedCornerImage.swift */; };
 		E9A6A6882035DD8500E7B607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6A6872035DD8500E7B607 /* AppDelegate.swift */; };
-		E9A6A68A2035DD8500E7B607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6A6892035DD8500E7B607 /* ViewController.swift */; };
+		E9A6A68A2035DD8500E7B607 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6A6892035DD8500E7B607 /* CameraVC.swift */; };
 		E9A6A68D2035DD8500E7B607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A6A68B2035DD8500E7B607 /* Main.storyboard */; };
 		E9A6A68F2035DD8500E7B607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A6A68E2035DD8500E7B607 /* Assets.xcassets */; };
 		E9A6A6922035DD8500E7B607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A6A6902035DD8500E7B607 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E99B5E472038708A0053CC6C /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		E99B5E49203872680053CC6C /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		E99B5E4B2038730D0053CC6C /* RoundedCornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImage.swift; sourceTree = "<group>"; };
 		E9A6A6842035DD8500E7B607 /* Vision_iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision_iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A6A6872035DD8500E7B607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9A6A6892035DD8500E7B607 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9A6A6892035DD8500E7B607 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		E9A6A68C2035DD8500E7B607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9A6A68E2035DD8500E7B607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9A6A6912035DD8500E7B607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +60,41 @@
 		E9A6A6862035DD8500E7B607 /* Vision_iOSDev */ = {
 			isa = PBXGroup;
 			children = (
+				E9A6A69B2035DDAE00E7B607 /* Resources */,
+				E9A6A69A2035DDA500E7B607 /* View */,
+				E9A6A6992035DD9400E7B607 /* Controller */,
 				E9A6A6872035DD8500E7B607 /* AppDelegate.swift */,
-				E9A6A6892035DD8500E7B607 /* ViewController.swift */,
 				E9A6A68B2035DD8500E7B607 /* Main.storyboard */,
 				E9A6A68E2035DD8500E7B607 /* Assets.xcassets */,
 				E9A6A6902035DD8500E7B607 /* LaunchScreen.storyboard */,
 				E9A6A6932035DD8500E7B607 /* Info.plist */,
 			);
 			path = Vision_iOSDev;
+			sourceTree = "<group>";
+		};
+		E9A6A6992035DD9400E7B607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9A6A6892035DD8500E7B607 /* CameraVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9A6A69A2035DDA500E7B607 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E99B5E472038708A0053CC6C /* RoundedCornerView.swift */,
+				E99B5E49203872680053CC6C /* RoundedCornerButton.swift */,
+				E99B5E4B2038730D0053CC6C /* RoundedCornerImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9A6A69B2035DDAE00E7B607 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A6A68A2035DD8500E7B607 /* ViewController.swift in Sources */,
+				E9A6A68A2035DD8500E7B607 /* CameraVC.swift in Sources */,
+				E99B5E4C2038730D0053CC6C /* RoundedCornerImage.swift in Sources */,
 				E9A6A6882035DD8500E7B607 /* AppDelegate.swift in Sources */,
+				E99B5E4A203872680053CC6C /* RoundedCornerButton.swift in Sources */,
+				E99B5E482038708A0053CC6C /* RoundedCornerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

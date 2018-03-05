@@ -15,5 +15,4 @@ class RoundedCornerImage: UIImageView {
         self.layer.shadowOpacity = 0.75
         self.layer.cornerRadius = 15
     }
-    
 }

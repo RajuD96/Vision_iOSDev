@@ -74,16 +74,25 @@
                                 <state key="normal" title="FLASH OFF">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="flashBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ys2-ad-diH"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-tA-FoP">
+                                <rect key="frame" x="301" y="677" width="20" height="20"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="A6i-xj-0OX" secondAttribute="bottom" id="3IE-Ze-5yT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tkW-G0-S9P" secondAttribute="trailing" constant="20" id="BtB-Hg-OY5"/>
+                            <constraint firstItem="Xg7-tA-FoP" firstAttribute="centerX" secondItem="tkW-G0-S9P" secondAttribute="centerX" id="DMW-0y-clH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tkW-G0-S9P" secondAttribute="bottom" constant="20" id="GEw-uM-KSk"/>
                             <constraint firstItem="A6i-xj-0OX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QwT-5Q-fKl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tfW-Bk-v2G" secondAttribute="bottom" constant="20" id="TO0-9x-pTS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mHp-Go-7rc" secondAttribute="trailing" constant="20" id="VOQ-wO-ZvA"/>
+                            <constraint firstItem="Xg7-tA-FoP" firstAttribute="centerY" secondItem="tkW-G0-S9P" secondAttribute="centerY" id="c3Y-kh-3Bt"/>
                             <constraint firstItem="mHp-Go-7rc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="dFE-98-jAk"/>
                             <constraint firstItem="A6i-xj-0OX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kh9-O3-xDN"/>
                             <constraint firstItem="tfW-Bk-v2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lNu-7K-wk7"/>
@@ -99,6 +108,7 @@
                         <outlet property="flashBtn" destination="tfW-Bk-v2G" id="lHB-m2-lKX"/>
                         <outlet property="identificationLbl" destination="S32-QB-aAL" id="QkR-6J-rXB"/>
                         <outlet property="roundedCornerLbl" destination="mHp-Go-7rc" id="FYX-hd-OMA"/>
+                        <outlet property="spinner" destination="Xg7-tA-FoP" id="2a4-JJ-p9E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E947DEC520432FD60042107B /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E947DEC420432FD60042107B /* SqueezeNet.mlmodel */; };
 		E99B5E482038708A0053CC6C /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B5E472038708A0053CC6C /* RoundedCornerView.swift */; };
 		E99B5E4A203872680053CC6C /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B5E49203872680053CC6C /* RoundedCornerButton.swift */; };
 		E99B5E4C2038730D0053CC6C /* RoundedCornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B5E4B2038730D0053CC6C /* RoundedCornerImage.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E947DEC420432FD60042107B /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		E99B5E472038708A0053CC6C /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		E99B5E49203872680053CC6C /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		E99B5E4B2038730D0053CC6C /* RoundedCornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImage.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		E9A6A69B2035DDAE00E7B607 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E947DEC420432FD60042107B /* SqueezeNet.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A6A68A2035DD8500E7B607 /* CameraVC.swift in Sources */,
+				E947DEC520432FD60042107B /* SqueezeNet.mlmodel in Sources */,
 				E99B5E4C2038730D0053CC6C /* RoundedCornerImage.swift in Sources */,
 				E9A6A6882035DD8500E7B607 /* AppDelegate.swift in Sources */,
 				E99B5E4A203872680053CC6C /* RoundedCornerButton.swift in Sources */,

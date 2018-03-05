@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import CoreML
+import Vision
 
 class CameraVC: UIViewController {
     
@@ -22,7 +24,6 @@ class CameraVC: UIViewController {
     @IBOutlet weak var flashBtn: RoundedCornerButton!
     @IBOutlet weak var roundedCornerLbl: RoundedCornerView!
     @IBOutlet weak var capturedImageView: RoundedCornerImage!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +53,9 @@ class CameraVC: UIViewController {
             
             if captureSession.canAddOutput(cameraOutput) == true {
                 captureSession.addOutput(cameraOutput)
-                
                 previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                
                 previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
                 previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-                
                 cameraView.layer.addSublayer(previewLayer!)
                 cameraView.addGestureRecognizer(tap)
                 captureSession.startRunning()
@@ -75,6 +73,21 @@ class CameraVC: UIViewController {
         
     }
     
+    func resultsMethod(request: VNRequest, error: Error?){
+        guard let results = request.results as? [VNClassificationObservation] else { return }
+        for classification in results {
+            if classification.confidence < 0.5 {
+                self.identificationLbl.text = "I'm not sure what it is. please try again."
+                self.confidenceLbl.text = ""
+                break
+            }
+            else {
+                self.identificationLbl.text = classification.identifier
+                self.confidenceLbl.text = "CONFIDENCE:\(Int(classification.confidence * 100))%"
+                break
+            }
+        }
+    }
 
 }
 
@@ -85,6 +98,15 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             debugPrint(error)
         }else {
             photoData = photo.fileDataRepresentation()
+            do {
+                let model = try VNCoreMLModel(for: SqueezeNet().model)
+                let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
+                let handler = VNImageRequestHandler(data: photoData!)
+                try handler.perform([request])
+            } catch {
+                debugPrint(error)
+            }
+            
             let image = UIImage(data: photoData!)
             self.capturedImageView.image = image
         }
